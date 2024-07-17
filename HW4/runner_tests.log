@@ -1,0 +1,18 @@
+2024-07-17 17:10:45,591 | root | INFO | Старт тестирования
+2024-07-17 17:10:45,593 | root | INFO | "test_challenge" выполнен успешно
+2024-07-17 17:10:45,594 | root | WARNING | Неверный тип данных для объекта Runner. ('Имя может быть только строкой, передано list',)
+Traceback (most recent call last):
+  File "L:\Python\UU-kurs\Module12\Module12\HW4\tests_12_4.py", line 57, in test_run
+    run_2 = runner.Runner(['Бегун_2'])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Python\UU-kurs\Module12\Module12\HW4\rt_with_exceptions.py", line 6, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано list
+2024-07-17 17:10:45,595 | root | WARNING | Неверная скорость для Runner. ('Скорость не может быть отрицательной, сейчас -5',)
+Traceback (most recent call last):
+  File "L:\Python\UU-kurs\Module12\Module12\HW4\tests_12_4.py", line 46, in test_walk
+    run_1 = runner.Runner('Бегун_1', speed=-5)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Python\UU-kurs\Module12\Module12\HW4\rt_with_exceptions.py", line 11, in __init__
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+ValueError: Скорость не может быть отрицательной, сейчас -5
