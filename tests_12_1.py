@@ -40,10 +40,9 @@ class RunnerTest(unittest.TestCase):
 
     def test_challenge(self):
         run_1 = runner.Runner('Бегун_1')
-        for _ in range(10):
-            run_1.walk()
         run_2 = runner.Runner('Бегун_2')
         for _ in range(10):
+            run_1.walk()
             run_2.run()
         self.assertNotEqual(run_1.distance, run_2.distance)
 
